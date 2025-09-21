@@ -326,9 +326,9 @@ with tab2:
         cols = st.columns([1]*min(top_n,4))
 
         for i, (idx, res) in enumerate(top_resumes.iterrows()):
-            resume_file_path = f"sample_data/{res['Candidate Name']}"
-            with open(resume_file_path, "rb") as f:
-                pdf_bytes = f.read()
+            # resume_file_path = f"sample_data/{res['Candidate Name']}"
+            # with open(resume_file_path, "rb") as f:
+            #     pdf_bytes = f.read()
             
             with cols[i % 4]:
                 # Card
@@ -365,14 +365,14 @@ with tab2:
 
                 # Centered Download Button
                 col1, col2, col3 = st.columns([1,2,1])
-                with col2:
-                    st.download_button(
-                        label="Open Resume",
-                        data=pdf_bytes,
-                        file_name=res['Candidate Name'],
-                        mime="application/pdf",
-                        key=f"download_{i}"
-                    )
+                # with col2:
+                #     st.download_button(
+                #         label="Open Resume",
+                #         data=pdf_bytes,
+                #         file_name=res['Candidate Name'],
+                #         mime="application/pdf",
+                #         key=f"download_{i}"
+                #     )
 
 
 
